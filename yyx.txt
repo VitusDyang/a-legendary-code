@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	double a,s,t;
+	int c,y;
+	printf("**************复利计算软件V1.0**************\n");
+	do
+	{
+	printf("*利率:");
+	scanf("%lf",&a);
+	printf("*本金:");
+	scanf("%lf",&s);
+	printf("*时间（年）:");
+	scanf("%d",&y);
+	printf("*复利次数:");
+	scanf("%d",&c);
+	a=pow((1+a/c),c)-1;
+	t=s*pow(1+a,y);
+	printf("\t\t***年复利结果：%lf\n",t);
+	}while(a!=0);
+}
+
+
